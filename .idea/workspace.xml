@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83f12a28-65e0-4ab5-8a24-82d477b24a76" name="Changes" comment="Install FastAPI and its dependencies into the project.">
-      <change afterPath="$PROJECT_DIR$/carsharing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Repository/CarRepository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carsharing.py" beforeDir="false" afterPath="$PROJECT_DIR$/carsharing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +30,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2yizuLLJEVcP8vv6dhLAPUhldJZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,9 +41,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.CarRepository.executor": "Debug",
     "Python.carsharing.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "add-first-endpoint",
+    "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "configurable.group.tools"
   }
 }]]></component>
@@ -76,5 +78,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Install FastAPI and its dependencies into the project." />
     <option name="LAST_COMMIT_MESSAGE" value="Install FastAPI and its dependencies into the project." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/carsharing.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

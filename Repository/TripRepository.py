@@ -1,9 +1,11 @@
 import json
 from pathlib import Path
-from Schema.Car import Car, CarInput
+from Repository.CarRepository import CarRepository
+from Schema.Car import Car
+from Schema.Trip import Trip, TripInput
 
 
-class CarRepository:
+class TripRepository:
     def __init__(self, file_path: str | None = None):
         self.jsonFilePath = "Cars.json"
 
@@ -22,27 +24,28 @@ class CarRepository:
         with open(self.jsonFilePath, 'w') as f:
             json.dump([Car.model_dump(car) for car in data], f, indent=4)
 
-    def get_all(self) -> list[Car]:
-        return self._read()
+    def add(self, car_id: int, trip_input: TripInput) -> Trip:
+        cars = CarRepository().get_all()
 
-    def add(self, car_input: CarInput) -> Car:
+        for car in cars:
+            if car.Id == car_id:
+                current_max_id = max([tripObject.Id for tripObject in car.Trips], default = 0)
+
+                new_trip = Trip(Id = current_max_id + 1, **trip_input.model_dump())
+                car.Trips.append(new_trip)
+
+                self._write(cars)
+                return new_trip
+
+    def update(self,car_id: int, updated_trip: Trip) -> bool:
         cars = self.get_all()
 
-        current_max_id = max([carObject.Id for carObject in cars])
-
-        new_car = Car(Id = current_max_id + 1, **car_input.model_dump())
-        cars.append(new_car)
-
-        self._write(cars)
-        return new_car
-
-    def update(self, updated_car: Car) -> bool:
-        cars = self.get_all()
-
-        for idx, car in enumerate(cars):
-            if car.Id == updated_car.Id:
-                cars[idx] = updated_car
-                break
+        for car_idx, car in enumerate(cars):
+            if car.Id == car_id:
+                for trip_idx, trip in enumerate(car.Trips):
+                    if trip.Id == updated_trip.Id:
+                        car.Trips[trip_idx] = updated_trip
+                        break
 
         self._write(cars)
         return True

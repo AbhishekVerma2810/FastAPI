@@ -6,7 +6,21 @@
         "TransmissionType": "Manual",
         "FuelType": "Petrol",
         "Size": "S",
-        "Id": 1
+        "Id": 1,
+        "Trips": [
+            {
+                "Start": 0,
+                "End": 100,
+                "Description": "Trip from New Delhi to Kanpur",
+                "Id": 1
+            },
+            {
+                "Start": 200,
+                "End": 300,
+                "Description": "Trip from New Delhi to Kanpur",
+                "Id": 2
+            }
+        ]
     },
     {
         "CarName": "Creta",
@@ -15,7 +29,8 @@
         "TransmissionType": "Automatic",
         "FuelType": "Diesel",
         "Size": "M",
-        "Id": 2
+        "Id": 2,
+        "Trips": []
     },
     {
         "CarName": "Fortuner",
@@ -24,7 +39,8 @@
         "TransmissionType": "Manual",
         "FuelType": "Diesel",
         "Size": "L",
-        "Id": 3
+        "Id": 3,
+        "Trips": []
     },
     {
         "CarName": "Baleno",
@@ -33,7 +49,8 @@
         "TransmissionType": "Automatic",
         "FuelType": "Petrol",
         "Size": "M",
-        "Id": 4
+        "Id": 4,
+        "Trips": []
     },
     {
         "CarName": "Nexon",
@@ -42,7 +59,8 @@
         "TransmissionType": "Manual",
         "FuelType": "Electric",
         "Size": "M",
-        "Id": 5
+        "Id": 5,
+        "Trips": []
     },
     {
         "CarName": "Seltos",
@@ -51,7 +69,8 @@
         "TransmissionType": "Automatic",
         "FuelType": "Petrol",
         "Size": "M",
-        "Id": 6
+        "Id": 6,
+        "Trips": []
     },
     {
         "CarName": "Alto",
@@ -60,7 +79,8 @@
         "TransmissionType": "Manual",
         "FuelType": "CNG",
         "Size": "S",
-        "Id": 7
+        "Id": 7,
+        "Trips": []
     },
     {
         "CarName": "XUV700",
@@ -69,7 +89,8 @@
         "TransmissionType": "Automatic",
         "FuelType": "Diesel",
         "Size": "L",
-        "Id": 8
+        "Id": 8,
+        "Trips": []
     },
     {
         "CarName": "Tiago",
@@ -78,7 +99,8 @@
         "TransmissionType": "Manual",
         "FuelType": "Petrol",
         "Size": "S",
-        "Id": 9
+        "Id": 9,
+        "Trips": []
     },
     {
         "CarName": "Kiger",
@@ -87,6 +109,7 @@
         "TransmissionType": "Automatic",
         "FuelType": "Petrol",
         "Size": "M",
-        "Id": 10
+        "Id": 10,
+        "Trips": []
     }
 ]

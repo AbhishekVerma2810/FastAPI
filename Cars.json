@@ -19,6 +19,12 @@
                 "End": 300,
                 "Description": "Trip from New Delhi to Kanpur",
                 "Id": 2
+            },
+            {
+                "Start": 1013,
+                "End": 1458,
+                "Description": "Trip from New Delhi to Kanpur",
+                "Id": 3
             }
         ]
     },
@@ -30,7 +36,14 @@
         "FuelType": "Diesel",
         "Size": "M",
         "Id": 2,
-        "Trips": []
+        "Trips": [
+            {
+                "Start": 1013,
+                "End": 1458,
+                "Description": "Trip from New Delhi to Kanpur",
+                "Id": 1
+            }
+        ]
     },
     {
         "CarName": "Fortuner",
@@ -80,7 +93,14 @@
         "FuelType": "CNG",
         "Size": "S",
         "Id": 7,
-        "Trips": []
+        "Trips": [
+            {
+                "Start": 1013,
+                "End": 1458,
+                "Description": "Trip from New Delhi to Kanpur",
+                "Id": 1
+            }
+        ]
     },
     {
         "CarName": "XUV700",

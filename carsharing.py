@@ -88,9 +88,14 @@ def change_trip(car_id: int, trip_id: int, new_data: TripInput) -> Trip:
     trip.Start = new_data.Start
     trip.End = new_data.End
     trip.Description = new_data.Description
-    tripRepo.update(trip)
+    tripRepo.update(car_id, trip)
 
     return trip
+
+@app.delete("/api/cars/{car_id}/trips/{trip_id}", status_code=204)
+def delete_trip(car_id: int, trip_id: int) -> None:
+    trip_to_delete = get_trip_by_id(car_id, trip_id)
+    tripRepo.delete(car_id, trip_to_delete)
     
 if __name__ == "__main__":
     uvicorn.run("carsharing:app", reload=True)

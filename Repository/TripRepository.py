@@ -38,7 +38,7 @@ class TripRepository:
                 return new_trip
 
     def update(self,car_id: int, updated_trip: Trip) -> bool:
-        cars = self.get_all()
+        cars = CarRepository().get_all()
 
         for car_idx, car in enumerate(cars):
             if car.Id == car_id:
@@ -50,9 +50,11 @@ class TripRepository:
         self._write(cars)
         return True
 
-    def delete(self, car_to_delete: Car) -> bool:
-        cars = self.get_all()
-        cars.remove(car_to_delete)
+    def delete(self, car_id: int, trip_to_delete: Trip) -> bool:
+        cars = CarRepository().get_all()
+        for car in cars:
+            if car.Id == car_id:
+                car.Trips.remove(trip_to_delete)
 
         self._write(cars)
         return True
